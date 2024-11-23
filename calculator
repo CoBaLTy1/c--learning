@@ -1,18 +1,38 @@
+
 using System;
 
 namespace first
-    {
+{
     class program
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Pick the first number");
             int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("choose an operator");
+            Console.WriteLine("+ - * /");
+            char operators = Console.ReadLine()[0];
+            Console.WriteLine("Pick the second number");
             int y = int.Parse(Console.ReadLine());
-            int z = x + y;
-            if (x > 0 && y > 0) { 
-                Console.WriteLine(z);
+
+            int z = 0;
+            if (operators == '+')
+            {
+                z = x + y;
             }
+            else if (operators == '-')
+            {
+                z = x - y;
+            }
+            else if (operators == '*')
+            {
+                z = x * y;
+            }
+            else if (operators == '/')
+            {
+                z = x / y;
+            }
+            Console.WriteLine("The answer is " + z);
 
             Console.ReadKey();
         }
